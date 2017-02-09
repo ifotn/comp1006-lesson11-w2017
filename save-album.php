@@ -11,6 +11,7 @@
 $title = $_POST['title'];
 $year = $_POST['year'];
 $artist = $_POST['artist'];
+$albumId = $_POST['albumId'];
 
 // variable to indicate if there are 1 or more input errors
 $ok = true;
@@ -40,14 +41,24 @@ if ($ok == true) {
     // connect to db - dbtype, server address, dbname, username, password
     $conn = new PDO('mysql:host=localhost;dbname=gcrfreeman', 'root', '');
 
-    // set up an SQL instruction to save the new album - INSERT
-    $sql = "INSERT INTO albums (title, year, artist) VALUES (:title, :year, :artist);";
+    // set up an SQL instruction to save the new album - INSERT or UPDATE
+    if (empty($albumId)) {
+        $sql = "INSERT INTO albums (title, year, artist) VALUES (:title, :year, :artist);";
+    }
+    else {
+        $sql = "UPDATE albums SET title = :title, year = :year, artist = :artist WHERE albumId = :albumId";
+    }
 
     // pass the input variables to the SQL command
     $cmd = $conn->prepare($sql);
     $cmd->bindParam(':title', $title, PDO::PARAM_STR, 50);
     $cmd->bindParam(':year', $year, PDO::PARAM_INT);
     $cmd->bindParam(':artist', $artist, PDO::PARAM_STR, 50);
+
+    // populate id if we have one
+    if (!empty($albumId)) {
+        $cmd->bindParam(':albumId', $albumId, PDO::PARAM_INT);
+    }
 
     // execute the INSERT
     $cmd->execute();
@@ -56,7 +67,8 @@ if ($ok == true) {
     $conn = null;
 
     // show a message to the user
-    echo 'Album Saved';
+    //echo 'Album Saved';
+    header('location:albums.php');
 }
 ?>
 
