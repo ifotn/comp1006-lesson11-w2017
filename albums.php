@@ -50,7 +50,7 @@ echo '</table>';
 $conn = null;
 ?>
 
-<!-- Latest   jQuery -->
+<!-- Latest jQuery -->
 <script src="js/jquery-3.1.1.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
