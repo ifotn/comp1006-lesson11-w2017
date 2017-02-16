@@ -14,7 +14,14 @@
 <main class="container">
     <h1>Log In</h1>
 
-    <div class="alert alert-info" id="message">Please log in your account</div>
+    <?php
+    if ($_GET['invalid'] == true) {
+        echo '<div class="alert alert-danger" id="message">Invalid Login</div>';
+    }
+    else {
+        echo '<div class="alert alert-info" id="message">Please log in your account</div>';
+    }
+    ?>
 
     <form method="post" action="validate.php">
     <fieldset class="form-group">
