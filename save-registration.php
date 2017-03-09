@@ -32,7 +32,7 @@ if ($password != $confirm) {
 if ($ok) {
 
     // connect
-    $conn = new PDO('mysql:host=localhost;dbname=gcrfreeman', 'root', '');
+    require_once ('db.php');
 
     // set up sql insert
     $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";

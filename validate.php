@@ -3,7 +3,7 @@
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$conn = new PDO('mysql:host=localhost;dbname=gcrfreeman', 'root', '');
+require_once ('db.php');
 
 $sql = "SELECT userId, password FROM users WHERE username = :username";
 

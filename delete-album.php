@@ -1,13 +1,7 @@
 <?php ob_start();
 
 // auth check
-// access the existing session
-session_start();
-
-if (empty($_SESSION['userId'])) {
-    header('location:login.php');
-    exit();
-}
+require_once ('auth.php');
 ?>
 
 <!DOCTYPE html>
@@ -20,33 +14,37 @@ if (empty($_SESSION['userId'])) {
 
 <?php
 
-$albumId = null;
+try {
+    $albumId = null;
 
-// 1. Get the albumId from the URL, check it has a numeric value
-if (!empty($_GET['albumId'])) {
-    if (is_numeric($_GET['albumId'])) {
-        $albumId = $_GET['albumId'];
+    // 1. Get the albumId from the URL, check it has a numeric value
+    if (!empty($_GET['albumId'])) {
+        if (is_numeric($_GET['albumId'])) {
+            $albumId = $_GET['albumId'];
+        }
     }
+
+    if (!empty($albumId)) {
+
+        // 2. Connect
+        require_once('db.php');
+
+        // 3. Set up and run the SQL DELETE COMMAND
+        $sql = "DELETE FROM albums WHERE albumId = :albumId";
+        $cmd = $conn->prepare($sql);
+        $cmd->bindParam(':albumId', $albumId, PDO::PARAM_INT);
+        $cmd->execute();
+
+        // 4. Disconnect
+        $conn = null;
+    }
+
+    // 5. Redirect to refresh the albums page
+    header('location:albums.php');
 }
-
-if (!empty($albumId)) {
-
-    // 2. Connect
-    $conn = new PDO('mysql:host=localhost;dbname=gcrfreeman', 'root', '');
-
-    // 3. Set up and run the SQL DELETE COMMAND
-    $sql = "DELETE FROM albums WHERE albumId = :albumId";
-    $cmd = $conn->prepare($sql);
-    $cmd->bindParam(':albumId', $albumId, PDO::PARAM_INT);
-    $cmd->execute();
-
-    // 4. Disconnect
-    $conn = null;
+catch (exception $e) {
+    header('location:error.php');
 }
-
-// 5. Redirect to refresh the albums page
-header('location:albums.php');
-
 ?>
 
 </body>

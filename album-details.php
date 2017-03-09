@@ -1,32 +1,12 @@
 <?php ob_start();
 
 // auth check
-// access the existing session
-session_start();
-
-if (empty($_SESSION['userId'])) {
-    header('location:login.php');
-    exit();
-}
+require_once('auth.php');
 
 $pageTitle = 'Album Details';
 require_once ('header.php');
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Album Details</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-</head>
-<body>
-
-<?php
+try {
 // check the URL for an albumId in case the user clicked the edit button
 $albumId = null;
 $title = null;
@@ -39,7 +19,7 @@ if (!empty($_GET['albumId'])) {
         $albumId = $_GET['albumId'];
 
         // connect
-        $conn = new PDO('mysql:host=localhost;dbname=gcrfreeman', 'root', '');
+        require_once ('db.php');
 
         $sql = "SELECT title, year, artist FROM albums WHERE albumId = :albumId";
         $cmd = $conn->prepare($sql);
@@ -61,7 +41,6 @@ if (!empty($_GET['albumId'])) {
 
 <main class="container">
     <h1>Album Details</h1>
-    <a href="albums.php">View Albums</a>
 
     <form method="post" action="save-album.php">
         <fieldset class="form-group">
@@ -82,5 +61,10 @@ if (!empty($_GET['albumId'])) {
 
 </main>
 
-<?php require_once('footer.php');
+<?php
+}
+catch (exception $e) {
+    header('location:error.php');
+}
+require_once('footer.php');
 ob_flush(); ?>
