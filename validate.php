@@ -17,6 +17,7 @@ if (password_verify($password, $user['password'])) {
     // user found
     session_start(); // access the existing session
     $_SESSION['userId'] = $user['userId']; // store the user's id in a session variable
+    $_SESSION['username'] = $username;
     header('location:albums.php');  // take authenticated user to albums page
 }
 else {

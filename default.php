@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>COMP1006 Music Library | Home</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-
-</head>
-<body>
+<?php
+$pageTitle = 'COMP1006 | Music Library';
+require_once('header.php'); ?>
 
 <main class="container">
 
@@ -21,14 +11,7 @@
 
 </main>
 
-<!-- Latest jQuery -->
-<script src="js/jquery-3.1.1.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- custom js -->
-<script src="js/app.js"></script>
-
-</body>
-</html>
+<!-- footer -->
+<?php
+require_once('footer.php');
+?>

@@ -8,6 +8,9 @@ if (empty($_SESSION['userId'])) {
     header('location:login.php');
     exit();
 }
+
+$pageTitle = 'Album Details';
+require_once ('header.php');
 ?>
 
 <!DOCTYPE html>
@@ -78,13 +81,6 @@ if (!empty($_GET['albumId'])) {
     </form>
 
 </main>
-<!-- Latest jQuery -->
-<script src="js/jquery-3.1.1.min.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-</body>
-</html>
-
-<?php ob_flush(); ?>
+<?php require_once('footer.php');
+ob_flush(); ?>

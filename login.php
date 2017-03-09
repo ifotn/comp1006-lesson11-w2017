@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Log In</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-</head>
-<body>
+<?php
+$pageTitle = 'Please Login';
+require_once ('header.php'); ?>
 
 <main class="container">
     <h1>Log In</h1>
@@ -38,15 +29,5 @@
     </form>
 </main>
 
-<!-- Latest jQuery -->
-<script src="js/jquery-3.1.1.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- custom js -->
-<script src="js/app.js"></script>
-
-</body>
-</html>
+<?php require_once('footer.php'); ?>
 
