@@ -1,4 +1,14 @@
-<?php ob_start(); ?>
+<?php ob_start();
+
+// auth check
+// access the existing session
+session_start();
+
+if (empty($_SESSION['userId'])) {
+    header('location:login.php');
+    exit();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

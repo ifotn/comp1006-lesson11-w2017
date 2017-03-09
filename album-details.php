@@ -1,3 +1,15 @@
+<?php ob_start();
+
+// auth check
+// access the existing session
+session_start();
+
+if (empty($_SESSION['userId'])) {
+    header('location:login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,3 +86,5 @@ if (!empty($_GET['albumId'])) {
 
 </body>
 </html>
+
+<?php ob_flush(); ?>

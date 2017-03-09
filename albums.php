@@ -19,7 +19,8 @@
 session_start();
 
 if (!empty($_SESSION['userId'])) {
-    echo '<a href="album-details.php">Add a New Album</a>';
+    echo '<a href="album-details.php">Add a New Album</a> ';
+    echo '<a href="logout.php">Logout</a>';
 }
 
 // connect
@@ -57,7 +58,7 @@ foreach ($albums as $album) {
         <td><a href="delete-album.php?albumId=' . $album['albumId'] . '"
         class="btn btn-danger confirmation">Delete</a></td>';
         }
-    
+
         echo '</tr>';
 }
 
