@@ -44,6 +44,28 @@ try {
         $ok = false;
     }
 
+    // check cover upload if any
+    if (!empty($_FILES['cover'])) {
+        $name = $_FILES['cover']['name'];
+
+        // use end() and explode() to get the letters after the last period i.e. the file extension
+        $arr = end(explode('.', $name));
+        //echo $arr;
+
+        // convert the extension to lower case
+        $type = strtolower($arr);
+        //echo $type;
+
+        // allow jpg / png / gif / svg
+        $fileTypes = ['jpg', 'png', 'gif', 'svg'];
+
+        if (!in_array($type, $fileTypes)) {
+            echo 'Invalid Image Type<br />';
+            $ok = false;
+        }
+
+    }
+
     if ($ok == true) {
         // connect to db - dbtype, server address, dbname, username, password
         require_once('db.php');

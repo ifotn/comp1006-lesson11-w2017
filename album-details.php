@@ -42,7 +42,7 @@ if (!empty($_GET['albumId'])) {
 <main class="container">
     <h1>Album Details</h1>
 
-    <form method="post" action="save-album.php">
+    <form method="post" action="save-album.php" enctype="multipart/form-data">
         <fieldset class="form-group">
             <label for="title" class="col-sm-1">Title: *</label>
             <input name="title" id="title" required placeholder="Album Title" value="<?php echo $title; ?>" />
@@ -54,6 +54,10 @@ if (!empty($_GET['albumId'])) {
         <fieldset class="form-group">
             <label for="artist" class="col-sm-1">Artist: *</label>
             <input name="artist" id="artist" required placeholder="Artist Name" value="<?php echo $artist; ?>" />
+        </fieldset>
+        <fieldset class="form-group">
+            <label for="cover" class="col-sm-1">Cover:</label>
+            <input name="cover" id="cover" type="file" />
         </fieldset>
         <input name="albumId" id="albumId" value="<?php echo $albumId; ?>" type="hidden" />
         <button class="btn btn-success col-sm-offset-1">Save</button>
