@@ -19,7 +19,7 @@ try {
     require_once('db.php');
 
     // set up query
-    $sql = "SELECT albumId, title, year, artist FROM albums ORDER BY title";
+    $sql = "SELECT albumId, title, year, artist, cover FROM albums ORDER BY title";
 
     // run query and store results
     $cmd = $conn->prepare($sql);
@@ -28,7 +28,7 @@ try {
 
     // start table and headings
     echo '<table class="table table-striped table-hover">
-    <tr><th>Title</th><th>Year</th><th>Artist</th>';
+    <tr><th>Title</th><th>Year</th><th>Artist</th><th>Cover</th>';
 
     if (!empty($_SESSION['userId'])) {
         echo '<th>Edit</th><th>Delete</th>';
@@ -41,7 +41,12 @@ try {
         // print each album as a new row
         echo '<tr><td>' . $album['title'] . '</td>
             <td>' . $album['year'] . '</td>
-            <td>' . $album['artist'] . '</td>';
+            <td>' . $album['artist'] . '</td>
+            <td>';
+            if (!empty($album['cover'])) {
+                echo '<img src="covers/' . $album['cover'] . '" class="thumb" />';
+            }
+        echo '</td>';
 
         if (!empty($_SESSION['userId'])) {
             echo '<td><a href="album-details.php?albumId=' . $album['albumId'] . '" class="btn btn-primary">Edit</a></td>

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="429d869b-6595-4df1-b108-cf0c4a7681c4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/save-upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/album-details.php" afterPath="$PROJECT_DIR$/album-details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.php" afterPath="$PROJECT_DIR$/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/albums.php" afterPath="$PROJECT_DIR$/albums.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save-album.php" afterPath="$PROJECT_DIR$/save-album.php" />
     </list>
@@ -32,6 +29,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="albums.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/albums.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.725">
+              <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
+              <folding>
+                <marker date="1489696889373" expanded="true" signature="327:396" placeholder="SELECT album... " />
+                <marker date="1489696889373" expanded="true" signature="610:661" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="610:675" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="610:771" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="769:771" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="907:1029" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="907:1046" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="907:1531" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="907:1544" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="907:1550" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="1393:1517" placeholder="..." />
+                <marker date="1489696889373" expanded="true" signature="1454:1512" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.55">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.85">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
@@ -42,20 +82,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.425">
+            <state vertical-scroll-proportion="0.25144842">
               <caret line="7" column="85" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28736964">
+            <state vertical-scroll-proportion="-6.2">
               <caret line="8" column="74" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="74" />
               <folding />
             </state>
@@ -75,10 +115,11 @@
       <file leaf-file-name="album-details.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/album-details.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.95">
-              <caret line="60" column="19" selection-start-line="57" selection-start-column="8" selection-end-line="60" selection-end-column="19" />
+            <state vertical-scroll-proportion="-23.25">
+              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
               <folding>
-                <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
+                <marker date="1489696126425" expanded="true" signature="504:574" placeholder="SELECT title... " />
+                <marker date="1489696126425" expanded="true" signature="2120:2239" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -87,11 +128,11 @@
       <file leaf-file-name="save-album.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/save-album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.525">
-              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+            <state vertical-scroll-proportion="-16.375">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
-                <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-                <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+                <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+                <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
               </folding>
             </state>
           </provider>
@@ -133,7 +174,6 @@
         <option value="$PROJECT_DIR$/select-artist.php" />
         <option value="$PROJECT_DIR$/artist-details.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/../register.php" />
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/../login.php" />
@@ -148,13 +188,14 @@
         <option value="$PROJECT_DIR$/404.php" />
         <option value="$PROJECT_DIR$/error.php" />
         <option value="$PROJECT_DIR$/delete-album.php" />
-        <option value="$PROJECT_DIR$/albums.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/save-upload.php" />
         <option value="$PROJECT_DIR$/upload.php" />
         <option value="$PROJECT_DIR$/album-details.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/albums.php" />
         <option value="$PROJECT_DIR$/save-album.php" />
         <option value="$PROJECT_DIR$/db.php" />
       </list>
@@ -215,6 +256,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lesson9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lesson9" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,23 +381,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/album-details.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/save-album.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-            <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+            <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+            <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
           </folding>
         </state>
       </provider>
@@ -352,16 +397,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="0" selection-start-line="28" selection-start-column="7" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1489095575192" expanded="true" signature="327:389" placeholder="SELECT album... " />
-            <marker date="1489095575192" expanded="true" signature="603:654" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="603:750" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="748:750" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1008" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1331" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1344" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1350" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="1193:1317" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="1254:1312" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="327:396" placeholder="SELECT album... " />
+            <marker date="1489696889373" expanded="true" signature="610:661" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="610:675" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="610:771" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="769:771" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1029" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1046" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1531" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1544" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1550" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="1393:1517" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="1454:1512" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -388,7 +435,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="504:574" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="2120:2239" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -398,8 +446,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
           <folding>
-            <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-            <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+            <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+            <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
           </folding>
         </state>
       </provider>
@@ -409,7 +457,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="504:574" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="2120:2239" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -419,8 +468,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="73" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
           <folding>
-            <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-            <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+            <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+            <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
           </folding>
         </state>
       </provider>
@@ -444,7 +493,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="504:574" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="2120:2239" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -454,8 +504,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
-            <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-            <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+            <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+            <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
           </folding>
         </state>
       </provider>
@@ -514,7 +564,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="504:574" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="2120:2239" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -524,8 +575,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-            <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+            <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+            <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
           </folding>
         </state>
       </provider>
@@ -675,33 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/albums.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
-          <folding>
-            <marker date="1489095575192" expanded="true" signature="327:389" placeholder="SELECT album... " />
-            <marker date="1489095575192" expanded="true" signature="603:654" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="603:750" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="748:750" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1008" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1331" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1344" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="886:1350" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="1193:1317" placeholder="..." />
-            <marker date="1489095575192" expanded="true" signature="1254:1312" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6106605">
@@ -726,39 +750,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.2">
+          <caret line="8" column="74" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.55">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.85">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/albums.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.725">
+          <caret line="46" column="77" selection-start-line="46" selection-start-column="77" selection-end-line="46" selection-end-column="77" />
+          <folding>
+            <marker date="1489696889373" expanded="true" signature="327:396" placeholder="SELECT album... " />
+            <marker date="1489696889373" expanded="true" signature="610:661" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="610:675" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="610:771" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="769:771" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1029" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1046" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1531" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1544" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="907:1550" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="1393:1517" placeholder="..." />
+            <marker date="1489696889373" expanded="true" signature="1454:1512" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/album-details.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.95">
-          <caret line="60" column="19" selection-start-line="57" selection-start-column="8" selection-end-line="60" selection-end-column="19" />
+        <state vertical-scroll-proportion="-23.25">
+          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
           <folding>
-            <marker date="1489693432662" expanded="true" signature="489:552" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="504:574" placeholder="SELECT title... " />
+            <marker date="1489696126425" expanded="true" signature="2120:2239" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/save-album.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.525">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+        <state vertical-scroll-proportion="-16.375">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <marker date="1489694412220" expanded="true" signature="1871:1943" placeholder="INSERT INTO albums... " />
-            <marker date="1489694412220" expanded="true" signature="1984:2073" placeholder="UPDATE album... " />
+            <marker date="1489697336136" expanded="true" signature="2310:2397" placeholder="INSERT INTO albums... " />
+            <marker date="1489697336136" expanded="true" signature="2438:2543" placeholder="UPDATE album... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.425">
+        <state vertical-scroll-proportion="0.25144842">
           <caret line="7" column="85" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28736964">
-          <caret line="8" column="74" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="74" />
           <folding />
         </state>
       </provider>

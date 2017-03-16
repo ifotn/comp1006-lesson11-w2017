@@ -12,6 +12,7 @@ $albumId = null;
 $title = null;
 $year = null;
 $artist = null;
+$cover = null;
 
 if (!empty($_GET['albumId'])) {
     if (is_numeric($_GET['albumId'])) {
@@ -21,7 +22,7 @@ if (!empty($_GET['albumId'])) {
         // connect
         require_once ('db.php');
 
-        $sql = "SELECT title, year, artist FROM albums WHERE albumId = :albumId";
+        $sql = "SELECT title, year, artist, cover FROM albums WHERE albumId = :albumId";
         $cmd = $conn->prepare($sql);
         $cmd->bindParam(':albumId', $albumId, PDO::PARAM_INT);
         $cmd->execute();
@@ -31,6 +32,7 @@ if (!empty($_GET['albumId'])) {
         $title = $album['title'];
         $year = $album['year'];
         $artist = $album['artist'];
+        $cover = $album['cover'];
 
         // disconnect
         $conn = null;
@@ -59,6 +61,16 @@ if (!empty($_GET['albumId'])) {
             <label for="cover" class="col-sm-1">Cover:</label>
             <input name="cover" id="cover" type="file" />
         </fieldset>
+
+        <?php
+        // show album cover if there is one
+        if (!empty($cover)) {
+            echo '<div>
+                <img src="covers/' . $cover . '" title="Album Cover" class="col-sm-offset-1" />
+                </div>';
+        }
+        ?>
+
         <input name="albumId" id="albumId" value="<?php echo $albumId; ?>" type="hidden" />
         <button class="btn btn-success col-sm-offset-1">Save</button>
     </form>

@@ -20,6 +20,7 @@ try {
     $year = $_POST['year'];
     $artist = $_POST['artist'];
     $albumId = $_POST['albumId'];
+    $cover = null;
 
     // variable to indicate if there are 1 or more input errors
     $ok = true;
@@ -45,7 +46,7 @@ try {
     }
 
     // check cover upload if any
-    if (!empty($_FILES['cover'])) {
+    if (!empty($_FILES['cover']['name'])) {
         $name = $_FILES['cover']['name'];
 
         // use end() and explode() to get the letters after the last period i.e. the file extension
@@ -64,6 +65,20 @@ try {
             $ok = false;
         }
 
+        // size check
+        $size = $_FILES['cover']['size'];
+        if ($size > 2048000) {
+            echo 'Cover Image must be less than 2 MB<br />';
+            $ok = false;
+        }
+
+        // rename to unique file name
+        $cover = uniqid("") . "-$name";
+
+        // copy to /covers folder
+        $tmp_name = $_FILES['cover']['tmp_name'];
+        move_uploaded_file($tmp_name, "covers/$cover");
+
     }
 
     if ($ok == true) {
@@ -72,9 +87,9 @@ try {
 
         // set up an SQL instruction to save the new album - INSERT or UPDATE
         if (empty($albumId)) {
-            $sql = "INSERT INTO albums (title, year, artist) VALUES (:title, :year, :artist);";
+            $sql = "INSERT INTO albums (title, year, artist, cover) VALUES (:title, :year, :artist, :cover);";
         } else {
-            $sql = "UPDATE albums SET title = :title, year = :year, artist = :artist WHERE albumId = :albumId";
+            $sql = "UPDATE albums SET title = :title, year = :year, artist = :artist, cover = :cover WHERE albumId = :albumId";
         }
 
         // pass the input variables to the SQL command
@@ -82,6 +97,7 @@ try {
         $cmd->bindParam(':title', $title, PDO::PARAM_STR, 50);
         $cmd->bindParam(':year', $year, PDO::PARAM_INT);
         $cmd->bindParam(':artist', $artist, PDO::PARAM_STR, 50);
+        $cmd->bindParam(':cover', $cover, PDO::PARAM_STR, 50);
 
         // populate id if we have one
         if (!empty($albumId)) {

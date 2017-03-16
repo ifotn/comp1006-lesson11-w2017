@@ -10,6 +10,9 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
