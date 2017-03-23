@@ -31,8 +31,9 @@
                 <li><a href="login.php">Login</a></li>';
         }
         else {
-            // private link
-            echo '<li><a href="logout.php">Logout</a></li>';
+            // private links
+            echo '<li><a href="album-details.php">Add Album</a></li>
+                <li><a href="logout.php">Logout</a></li>';
         }
         ?>
     </ul>

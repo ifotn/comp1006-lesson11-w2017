@@ -12,6 +12,9 @@
 <!-- custom js -->
 <script src="js/app.js"></script>
 
+<!--sorttable for Table Sorting -->
+<script src="js/sorttable.js"></script>
+
 </body>
 </html>
 
