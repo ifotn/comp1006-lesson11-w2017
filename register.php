@@ -20,11 +20,15 @@ require_once ('header.php'); ?>
         <label for="confirm" class="col-sm-2">Confirm Password:</label>
         <input type="password" name="confirm" id="confirm" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
     </fieldset>
+    <div class="g-recaptcha" data-sitekey="6LcPmgQTAAAAAO8CDeB-fKKVyUOikLev1GR-LORv"></div>
     <div class="col-sm-offset-2">
         <button class="btn btn-success btnRegister">Register</button>
     </div>
     </form>
 </main>
+
+<!-- google recaptcha api script -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
 <?php require_once('footer.php'); ?>
 

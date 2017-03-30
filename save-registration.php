@@ -29,6 +29,41 @@ if ($password != $confirm) {
     $ok = false;
 }
 
+// recaptcha validation
+$secret = '6LcPmgQTAAAAAD2XQXfomdwCcyxkQ-x7mJLoGQqz';
+$response = $_POST['g-recaptcha-response'];
+
+// use the PHP curl library to make a hidden call to google's api
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+
+// create an array that holds the values we need to send to Google
+$postData = array();
+$postData['secret'] = $secret;
+$postData['response'] = $response;
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+
+// run the curl request and save the response from google
+$result = curl_exec($ch);
+curl_close($ch);
+
+$resultJson = json_decode($result, true);
+
+//echo $resultJson['success'];
+
+if ($resultJson['success'] != 1) {
+    echo 'Are you human?<br />';
+    $ok = false;
+}
+/*else {
+    $ok = 'Captcha ok';
+    echo $ok;
+}*/
+
+//echo $result;
+
 if ($ok) {
 
     // connect
